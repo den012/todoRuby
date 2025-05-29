@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: myapp_development
+
+  web:
+    build: .
+    command: bundle exec rails server -b 0.0.0.0 set frozen false
+    user: "0" # Run as root to avoid permission issues
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: postgres://postgres:password@db:5432/myapp_development
+
+volumes:
+  postgres_data:
