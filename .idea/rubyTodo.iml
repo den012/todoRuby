@@ -37,9 +37,13 @@
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.4.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.10.0, RVM: ruby-3.2.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv (v3.1.8, RVM: ruby-3.2.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv-rails (v3.1.8, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.3, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erb (v5.0.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.1, RVM: ruby-3.2.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.17.2, RVM: ruby-3.2.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi-compiler (v1.3.2, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.7, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="importmap-rails (v2.1.0, RVM: ruby-3.2.8) [gem]" level="application" />
@@ -78,13 +82,16 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.1.5.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.2.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v6.14.0, RVM: ruby-3.2.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="recaptcha (v5.19.0, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.10.0, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.6.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="request_store (v1.7.0, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.4.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.4.1, RVM: ruby-3.2.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="scrypt (v3.0.8, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="securerandom (v0.4.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.33.0, RVM: ruby-3.2.8) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="simple_form (v5.3.1, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.2, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.5.2, RVM: ruby-3.2.8) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stimulus-rails (v1.3.4, RVM: ruby-3.2.8) [gem]" level="application" />

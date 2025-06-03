@@ -3,6 +3,10 @@ source "https://rubygems.org"
 ruby "3.2.8"
 
 gem 'authlogic'
+gem "scrypt", "~> 3.0"
+gem 'recaptcha', require: 'recaptcha/rails'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.5", ">= 7.1.5.1"
