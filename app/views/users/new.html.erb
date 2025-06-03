@@ -1,4 +1,4 @@
-<h1>Sign Up</h1>
+<h1>Sign Up page 0</h1>
 
 <%= form_with model: @user, url: signup_path, local: true do |form| %>
   <% if @user.errors.any? %>
@@ -19,6 +19,7 @@
     <%= form.password_field :password %>
   </div>
 
+  <%= recaptcha_tags %>
 
   <%= form.submit "Sign Up" %>
 <% end %>
