@@ -10,7 +10,7 @@ services:
 
   web:
     build: .
-    command: bundle exec rails server -b 0.0.0.0 set frozen false
+    command: bundle exec rails server -b 0.0.0.0
     user: "0" # Run as root to avoid permission issues
     volumes:
       - .:/app
