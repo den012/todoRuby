@@ -7,11 +7,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     #check captcha
-    if verify_recaptcha(action: 'signup', minimum_score: 0.5, model: @user) && @user.save
-      redirect_to login_path, notice: "Signup successful!"
-    else
-      flash.now[:alert] = "Captcha verification failed or signup error."
-      render :new, status: :unprocessable_entity
+    if @user.email.present? && @user.password.present?
+      if verify_recaptcha(action: 'signup', minimum_score: 0.5, model: @user) && @user.save
+          redirect_to login_path, notice: "Signup successful!"
+      else
+        flash.now[:alert] = "Captcha verification failed or signup error."
+        render :new, status: :unprocessable_entity
+      end
     end
   end
 

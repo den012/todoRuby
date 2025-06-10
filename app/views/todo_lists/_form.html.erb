@@ -1,0 +1,4 @@
+<%= form_with(model: todo_list, local: true, class: "todo-form") do |f| %>
+  <%= f.text_field :title, placeholder: "New Todo List", class: "input" %>
+  <%= f.submit "Add List", class: "btn" %>
+<% end %>

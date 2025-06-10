@@ -2,7 +2,16 @@
 
 <% if current_user %>
   <p>You're logged in as <strong><%= current_user.email %></strong>.</p>
-  <%= link_to "Log Out", logout_path, method: :delete %>
+  <%= button_to "Log Out", logout_path, method: :delete %>
+
+  <h2>Your Todo Lists</h2>
+
+  <%= render "todo_lists/form", todo_list: TodoList.new %>
+
+  <div id="todo-lists">
+    <%= render partial: "todo_lists/list", locals: { todo_lists: current_user.todo_lists } %>
+  </div>
+
 <% else %>
   <%= link_to "Sign Up", signup_path %> |
   <%= link_to "Log In", login_path %>

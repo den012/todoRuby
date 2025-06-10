@@ -1,0 +1,129 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+#todo-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 5rem;
+  //justify-content: center;
+}
+
+.todo-list {
+  width: 400px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.todo-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.tasks {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+  width: 400px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 0.95rem;
+  background: #fafbfc;
+  border-radius: 4px;
+  margin-bottom: 0.2rem;
+  transition: background 0.15s;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item:hover {
+  background: #f0f4f8;
+}
+
+.task-item span {
+  flex: 1;
+  word-break: break-word;
+}
+
+.task-form, .todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 40px;
+  width: 400px;
+}
+
+.input {
+  flex: 1;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #f7f7f7;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+  background: #fff;
+}
+
+.btn {
+  background: #007bff;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.btn-danger {
+  background: #dc3545;
+}
+
+.btn-danger:hover {
+  background: #a71d2a;
+}
+
+.btn-sm {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: #fff;
+}

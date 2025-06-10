@@ -1,22 +1,26 @@
-<h2>Log In</h2>
 
-<% if @user_session.errors.any? %>
-  <div id="error_explanation">
-    <h3><%= pluralize(@user_session.errors.count, "error") %> prevented login:</h3>
-    <ul>
-      <% @user_session.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<div class="auth-form">
+  <h1>Log In 😀</h1>
 
-<%= form_with model: @user_session, url: login_path, local: true do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %><br>
+  <% if @user_session.errors.any? %>
+    <div id="error_explanation">
+      <h3><%= pluralize(@user_session.errors.count, "error") %> prevented login:</h3>
+      <ul>
+        <% @user_session.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
+  <%= form_with model: @user_session, url: login_path, local: true do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email %><br>
 
-  <%= f.submit "Log In" %>
-<% end %>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+
+    <%= link_to "Allready have an account?", signup_path, class: "signup-link" %>
+    <%= f.submit "Log In" %>
+  <% end %>
+</div>

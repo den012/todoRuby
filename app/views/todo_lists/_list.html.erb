@@ -1,0 +1,23 @@
+<% todo_lists.each do |list| %>
+  <div class="todo-list">
+    <div class="todo-list-header">
+      <h3><%= list.title %></h3>
+      <%= button_to "Delete List", todo_list_path(list), method: :delete, class: "btn btn-danger" %>
+    </div>
+
+
+    <%= form_with(model: [list, Task.new], local: true, class: "task-form") do |f| %>
+      <%= f.text_field :content, placeholder: "New Task", class: "input" %>
+      <%= f.submit "Add Task", class: "btn" %>
+    <% end %>
+
+    <ul class="tasks">
+      <% list.tasks.each do |task| %>
+        <li class="task-item">
+          <span><%= task.content %></span>
+          <%= button_to "Delete", todo_list_task_path(list, task), method: :delete, class: "btn btn-sm btn-outline" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

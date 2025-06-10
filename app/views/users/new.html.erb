@@ -1,25 +1,24 @@
-<h1>Sign Up page 0</h1>
+<div class="auth-form">
+  <h1>Hey, Sign Up 🆙</h1>
 
-<%= form_with model: @user, url: signup_path, local: true do |form| %>
-  <% if @user.errors.any? %>
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
+  <%= form_with model: @user, url: signup_path, local: true do |form| %>
+    <% if @user.errors.any? %>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+      <%= form.label :email %>
+      <%= form.email_field :email %>
+
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+
+    <%= recaptcha_tags %>
+
+    <%= link_to "Are you new?", login_path, class: "login-link" %>
+    <%= form.submit "Sign Up", id: "signup-btn" %>
   <% end %>
-
-  <div>
-    <%= form.label :email %><br>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.label :password %><br>
-    <%= form.password_field :password %>
-  </div>
-
-  <%= recaptcha_tags %>
-
-  <%= form.submit "Sign Up" %>
-<% end %>
+</div>
