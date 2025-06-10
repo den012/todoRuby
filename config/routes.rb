@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'broadcast_messages/update'
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -22,6 +23,8 @@ Rails.application.routes.draw do
   resources :todo_lists, only: [:index, :create, :destroy] do
     resources :tasks, only: [:create, :destroy]
   end
+
+  resource :broadcast_message, only: [:show, :update]
 
 
 

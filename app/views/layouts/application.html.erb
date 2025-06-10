@@ -12,5 +12,7 @@
 
   <body>
     <%= yield %>
+    <%= action_cable_meta_tag %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </body>
 </html>

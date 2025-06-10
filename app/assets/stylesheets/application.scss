@@ -79,3 +79,56 @@ body {
     color: #4f46e5;
     text-decoration: none;
 }
+
+#live-message {
+  background: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+  border-radius: 6px;
+}
+
+.live-message-container {
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  background: #fafbfc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.live-message {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.broadcast-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.broadcast-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.broadcast-submit {
+  padding: 0.5rem 1rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: #1d4ed8;
+  }
+}

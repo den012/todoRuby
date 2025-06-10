@@ -4,6 +4,19 @@
   <p>You're logged in as <strong><%= current_user.email %></strong>.</p>
   <%= button_to "Log Out", logout_path, method: :delete %>
 
+  <h2>Live Message</h2>
+
+<div class="live-message-container">
+  <div id="live-message" class="live-message">
+    <%= BroadcastMessage.first.content %>
+  </div>
+
+  <%= form_with model: @message, url: broadcast_message_path(@message), method: :patch, local: false, html: { class: "broadcast-form" } do |f| %>
+    <%= f.text_field :content, placeholder: "Update live message...", class: "broadcast-input" %>
+    <%= f.submit "Broadcast Message", class: "broadcast-submit" %>
+  <% end %>
+</div>
+
   <h2>Your Todo Lists</h2>
 
   <%= render "todo_lists/form", todo_list: TodoList.new %>
